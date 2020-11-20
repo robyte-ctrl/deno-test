@@ -1,2 +1,4 @@
-bin
-config/**
+bin/**
+!bin/.gitkeep
+config/**.ts
+!config/.gitkeep
