@@ -6,7 +6,7 @@ just testing what can be achieved with deno
 
 to run the app follow these steps:
 
-1. make a copy of `default.ts.example` and rename it to `default.ts`
+1. inside `config` make a copy of `default.ts.example` and rename it to `default.ts`
 2. run `deno run --allow-env --allow-read --allow-net src/main.ts` in the shell
 
 ## building
