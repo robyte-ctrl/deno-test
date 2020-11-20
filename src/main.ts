@@ -11,15 +11,16 @@ const config = await Config.fromFS<Vars>();
 
 const hostname = config.get('hostname');
 const port = config.get('port');
+const name = config.get('name');
 
-const s = serve({ hostname, port });
+const server = serve({ hostname, port });
 
 console.log(`listening on http://${ hostname }:${ port }`);
 
-for await (const req of s) {
-  const { method, url } = req;
+for await (const request of server) {
+  const { method, url } = request;
 
   console.log(`${ method } ${ url }`);
 
-  req.respond({ body: "Hello World\n" });
+  request.respond({ body: `hello from ${ name }\n` });
 }
